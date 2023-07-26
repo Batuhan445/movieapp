@@ -2,7 +2,7 @@
 import { ThemeProvider } from 'next-themes'
 import React from 'react'
 
-const provider = ({ children }) => {
+const Provider = ({ children }) => {
     return (
         <ThemeProvider>
             {children}
@@ -10,4 +10,4 @@ const provider = ({ children }) => {
     )
 }
 
-export default provider
+export default Provider
