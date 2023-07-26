@@ -26,7 +26,7 @@ const Header = () => {
             <div className="flex items-center gap-2 border p-2 flex-1 rounded-lg">
 
                 <input
-                    className="outline-none flex-1"
+                    className="outline-none flex-1 bg-transparent"
                     placeholder="Arama Yapınız"
                     type="text"
                 />
