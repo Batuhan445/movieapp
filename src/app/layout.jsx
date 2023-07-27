@@ -2,6 +2,7 @@ import React from 'react'
 import "./globals.css"
 import Header from "@/components/header"
 import Provider from './provider'
+import Tabs from '@/components/Tabs'
 
 const layout = ({children}) => {
   return (
@@ -9,6 +10,7 @@ const layout = ({children}) => {
         <body>
             <Provider>
             <Header/>
+            <Tabs/>
             {children}
             </Provider>
         </body>
