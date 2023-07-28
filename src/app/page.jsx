@@ -1,7 +1,7 @@
 import Movies from '@/components/Movies';
 import React from 'react';
 
-const page = async ({ searchParams }) => {
+const Page = async ({ searchParams }) => {
   const genreQuery = searchParams.genre ? "movie/" + searchParams.genre : "movie/upcoming/";
   const apiKey = "1d5dad3345b663e244653304e46b496f";
   const apiUrl = `https://api.themoviedb.org/3/${genreQuery}?api_key=${apiKey}&language=en-US&page=1`;
@@ -27,6 +27,6 @@ const page = async ({ searchParams }) => {
   }
 };
 
-export default page;
+export default Page;
 
 
