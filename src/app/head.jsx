@@ -1,9 +1,9 @@
 import React from 'react'
 
-const head = () => {
+const Head = () => {
   return (
     <title>MovieApp</title>
   )
 }
 
-export default head
+export default Head
