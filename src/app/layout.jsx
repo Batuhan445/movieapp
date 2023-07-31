@@ -1,6 +1,6 @@
 import React from 'react'
 import "./globals.css"
-import Header from "@/components/header"
+import Header from "@/components/Header"
 import Provider from './provider'
 import Tabs from '@/components/Tabs'
 
