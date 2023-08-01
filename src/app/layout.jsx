@@ -7,6 +7,7 @@ import Tabs from '@/components/Tabs'
 const layout = ({children}) => {
   return (
     <html lang='en'>
+      <title>Movie App</title>
         <body>
             <Provider>
             <Header/>
