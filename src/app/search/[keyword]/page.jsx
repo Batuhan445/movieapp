@@ -6,7 +6,7 @@ const Page = async ({ params }) => {
     const keyword = params.keyword;
     const apiKey = "1d5dad3345b663e244653304e46b496f";
     const res = await fetch(
-      `http://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${keyword}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${keyword}`
     );
     const data = await res.json();
 

@@ -4,7 +4,7 @@ import React from 'react';
 const Page = async ({ searchParams }) => {
   const genreQuery = searchParams.genre ? "movie/" + searchParams.genre : "trending/all/day";
   const apiKey = "1d5dad3345b663e244653304e46b496f";
-  const apiUrl = `http://api.themoviedb.org/3/${genreQuery}?api_key=${apiKey}&language=tr`;
+  const apiUrl = `https://api.themoviedb.org/3/${genreQuery}?api_key=${apiKey}&language=tr`;
 
   try {
     const res = await fetch(apiUrl);

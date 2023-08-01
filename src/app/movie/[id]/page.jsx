@@ -5,7 +5,7 @@ import Image from "next/image";
 const getMovie = (id) => {
   const apiKey = "1d5dad3345b663e244653304e46b496f";
   return fetch(
-    `http://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=tr`
+    `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=tr`
   ).then((res) => res.json());
 };
 
