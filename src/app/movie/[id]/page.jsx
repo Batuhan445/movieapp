@@ -25,14 +25,13 @@ const Page = ({ params }) => {
 
   return (
     <div className="flex flex-col items-center">
-      <div className="w-full min-h-screen relative rounded-xl overflow-hidden">
+      <div className="w-full min-h-screen relative overflow-hidden">
         <Image
           layout="fill"
           objectFit="cover"
           style={{ opacity: "0.5" }}
-          src={`https://image.tmdb.org/t/p/original/${
-            movieDetail?.backdrop_path || movieDetail?.poster_path
-          }`}
+          src={movieDetail.backdrop_path === null ? "/img/empty-film-image.jpg" : `https://image.tmdb.org/t/p/original/${movieDetail?.backdrop_path}`
+          }
           alt="Movie Poster"
         />
 
