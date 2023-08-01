@@ -16,8 +16,8 @@ const Page = async ({ params }) => {
           <div>Aradığınız film bulunamadı</div>
         ) : (
           <div className="flex flex-wrap">
-            {data?.results?.map((dt, i) => (
-              <Movies key={i} dt={dt} />
+            {data?.results?.map((data, i) => (
+              <Movies key={i} data={data} />
             ))}
           </div>
         )}
