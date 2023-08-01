@@ -12,11 +12,11 @@ const Header = () => {
 
     const menu = [
         {
-            name: "Sign In",
+            name: "Giriş Yap",
             url: "/login"
         },
         {
-            name: "About",
+            name: "Hakkında",
             url: "/about"
         },
     ];
