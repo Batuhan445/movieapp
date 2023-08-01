@@ -13,8 +13,8 @@ const Page = async ({ searchParams }) => {
     return (
 
       <div className='flex items-center flex-wrap gap-3'>
-        {data?.results?.map((dt, i) => (
-          <Movies key={i} dt={dt} />
+        {data?.results?.map((data, i) => (
+          <Movies key={i} data={data} />
         ))}
       </div>
 
