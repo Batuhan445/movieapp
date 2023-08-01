@@ -24,6 +24,7 @@ const Header = () => {
     const searchFunc = (e) => {
         if(keyword.length >= 3) {
             router.push(`/search/${keyword}`)
+            setKeyword("")
         }
     }
 
@@ -49,6 +50,7 @@ const Header = () => {
                     className="outline-none flex-1 bg-transparent"
                     placeholder="Arama Yapınız"
                     type="text"
+                    value={keyword}
                 />
 
                 <BiSearch className="cursor-pointer" size={25} onClick={searchFunc}/>
