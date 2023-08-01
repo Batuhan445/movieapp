@@ -22,10 +22,16 @@ const Header = () => {
     ];
 
     const searchFunc = (e) => {
-        if(e.key === "Enter" && keyword.length >= 3) {
+        if(keyword.length >= 3) {
             router.push(`/search/${keyword}`)
         }
     }
+
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            searchFunc();
+        }
+    };
 
     return (
 
@@ -35,10 +41,10 @@ const Header = () => {
                 MovieApp
             </div>
 
-            <div className="flex items-center gap-2 border p-2 flex-1 rounded-lg">
+            <div onClick={searchFunc} className="flex items-center gap-2 border p-2 flex-1 rounded-lg">
 
                 <input
-                    onKeyDown={searchFunc}
+                    onKeyDown={handleKeyDown}
                     onChange={e => setKeyword(e.target.value)}
                     className="outline-none flex-1 bg-transparent"
                     placeholder="Arama Yapınız"
