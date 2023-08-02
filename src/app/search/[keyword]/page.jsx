@@ -1,5 +1,6 @@
 "use client"
 import Movies from "@/components/Movies";
+import ErrorBoundary from "@/components/errorboundary";
 import React from "react";
 
 const Page = async ({ params }) => {
@@ -12,6 +13,7 @@ const Page = async ({ params }) => {
     const data = await res.json();
 
     return (
+      <ErrorBoundary>
       <div>
         {!data?.results ? (
           <div>Aradığınız film bulunamadı</div>
@@ -23,6 +25,7 @@ const Page = async ({ params }) => {
           </div>
         )}
       </div>
+      </ErrorBoundary>
     );
   } catch (error) {
     // Handle any errors that occur during the API request

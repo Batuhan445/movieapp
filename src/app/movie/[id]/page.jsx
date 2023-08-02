@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import ErrorBoundary from "@/components/errorboundary";
 
 const getMovie = (id) => {
   const apiKey = "1d5dad3345b663e244653304e46b496f";
@@ -24,6 +25,7 @@ const Page = ({ params }) => {
   }
 
   return (
+    <ErrorBoundary>
     <div className="flex flex-col items-center">
       <div className="w-full min-h-screen relative overflow-hidden">
         <Image
@@ -44,6 +46,7 @@ const Page = ({ params }) => {
         </div>
       </div>
     </div>
+    </ErrorBoundary>
   );
 };
 
