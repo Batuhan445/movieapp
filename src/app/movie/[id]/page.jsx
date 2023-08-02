@@ -30,7 +30,7 @@ const Page = ({ params }) => {
           layout="fill"
           objectFit="cover"
           style={{ opacity: "0.5" }}
-          src={movieDetail.backdrop_path === null ? "/img/empty-film-image.jpg" : `https://image.tmdb.org/t/p/original/${movieDetail?.backdrop_path}`
+          src={movieDetail?.backdrop_path === null ? "/img/empty-film-image.jpg" : `https://image.tmdb.org/t/p/original/${movieDetail?.backdrop_path}`
           }
           alt="Movie Poster"
         />
