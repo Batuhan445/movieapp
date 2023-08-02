@@ -1,3 +1,4 @@
+"use client"
 import Movies from "@/components/Movies";
 import React from "react";
 
