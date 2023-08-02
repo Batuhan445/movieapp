@@ -5,9 +5,9 @@ import React from 'react';
 const Movies = ({ data }) => {
   
   const router = useRouter()
-  // Güvenli bir şekilde posterUrl oluşturma işlemi
+  
   const posterUrl = data?.backdrop_path === null
-    ? '/img/empty-film-image.jpg' // Alternatif görsel URL
+    ? '/img/empty-film-image.jpg'
     : `https://image.tmdb.org/t/p/original/${data.backdrop_path}`;
 
   return (
