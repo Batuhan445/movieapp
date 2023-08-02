@@ -1,4 +1,6 @@
+"use client"
 import Movies from '@/components/Movies';
+import ErrorBoundary from '@/components/errorboundary';
 import React from 'react';
 
 const Page = async ({ searchParams }) => {
@@ -11,12 +13,13 @@ const Page = async ({ searchParams }) => {
     const data = await res.json();
 
     return (
-
+      <ErrorBoundary>
       <div className='flex items-center flex-wrap gap-3'>
         {data?.results?.map((data, i) => (
           <Movies key={i} data={data} />
         ))}
       </div>
+      </ErrorBoundary>
 
     );
 
